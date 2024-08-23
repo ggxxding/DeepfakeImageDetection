@@ -1,0 +1,3 @@
+image,output,flag,username,timestamp
+flagged/image/ecc2e4a8188404e7baf5/000000581615.png,,,,2024-08-23 14:35:38.405126
+flagged/image/8109f608b3f2bdbfe59a/d80534da7b09be2684de429be22b8b9d.jpg,"{""label"": ""Real"", ""confidences"": [{""label"": ""Real"", ""confidence"": 0.750024676322937}, {""label"": ""Fake"", ""confidence"": 0.249975323677063}]}",,,2024-08-23 15:54:21.606802
