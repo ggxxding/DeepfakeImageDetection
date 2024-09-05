@@ -1,0 +1,507 @@
+train.py  --name  NPR_effnetb1  --dataroot  /mnt/share_data/dmj/phase1_converted/  --classes  0_real,1_fake  --batch_size  32  --delr_freq  10  --lr  0.0002  --niter  10
+shuffle:  True
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     RandomCrop(size=(224, 224), padding=None)
+flip:     RandomHorizontalFlip(p=0.5)
+sampler:  None
+cwd: /home/ubuntu/dmj/DeepfakeImageDetection
+2024_08_21_15_23_04 Train loss: 0.6518051028251648 at step: 400 lr 0.0002
+2024_08_21_15_28_02 Train loss: 0.5095630884170532 at step: 800 lr 0.0002
+2024_08_21_15_33_01 Train loss: 0.2610764503479004 at step: 1200 lr 0.0002
+2024_08_21_15_38_06 Train loss: 0.4086642861366272 at step: 1600 lr 0.0002
+2024_08_21_15_43_17 Train loss: 0.3905278444290161 at step: 2000 lr 0.0002
+2024_08_21_15_48_25 Train loss: 0.5370742678642273 at step: 2400 lr 0.0002
+2024_08_21_15_53_35 Train loss: 0.5734435319900513 at step: 2800 lr 0.0002
+2024_08_21_15_58_46 Train loss: 0.3930324912071228 at step: 3200 lr 0.0002
+2024_08_21_16_03_58 Train loss: 1.1613781452178955 at step: 3600 lr 0.0002
+2024_08_21_16_09_08 Train loss: 0.33384084701538086 at step: 4000 lr 0.0002
+2024_08_21_16_14_17 Train loss: 0.40828007459640503 at step: 4400 lr 0.0002
+2024_08_21_16_19_24 Train loss: 0.5503873825073242 at step: 4800 lr 0.0002
+2024_08_21_16_24_32 Train loss: 0.4255288243293762 at step: 5200 lr 0.0002
+2024_08_21_16_29_41 Train loss: 0.4757004976272583 at step: 5600 lr 0.0002
+2024_08_21_16_34_49 Train loss: 0.5133951902389526 at step: 6000 lr 0.0002
+2024_08_21_16_39_57 Train loss: 0.566461980342865 at step: 6400 lr 0.0002
+2024_08_21_16_45_02 Train loss: 0.3163803219795227 at step: 6800 lr 0.0002
+2024_08_21_16_50_09 Train loss: 0.369662344455719 at step: 7200 lr 0.0002
+2024_08_21_16_55_15 Train loss: 0.306558758020401 at step: 7600 lr 0.0002
+2024_08_21_17_00_23 Train loss: 0.3513001799583435 at step: 8000 lr 0.0002
+2024_08_21_17_05_29 Train loss: 0.6250599026679993 at step: 8400 lr 0.0002
+2024_08_21_17_10_35 Train loss: 0.4040268063545227 at step: 8800 lr 0.0002
+2024_08_21_17_15_42 Train loss: 0.2964688837528229 at step: 9200 lr 0.0002
+2024_08_21_17_20_48 Train loss: 0.24558120965957642 at step: 9600 lr 0.0002
+2024_08_21_17_25_54 Train loss: 0.20281770825386047 at step: 10000 lr 0.0002
+2024_08_21_17_31_02 Train loss: 0.20447170734405518 at step: 10400 lr 0.0002
+2024_08_21_17_36_09 Train loss: 0.17635643482208252 at step: 10800 lr 0.0002
+2024_08_21_17_40_45 Train loss: 0.29687413573265076 at step: 11200 lr 0.0002
+2024_08_21_17_43_42 Train loss: 0.17613881826400757 at step: 11600 lr 0.0002
+2024_08_21_17_46_37 Train loss: 0.546822190284729 at step: 12000 lr 0.0002
+2024_08_21_17_49_34 Train loss: 0.3068869113922119 at step: 12400 lr 0.0002
+2024_08_21_17_52_30 Train loss: 0.14146532118320465 at step: 12800 lr 0.0002
+2024_08_21_17_55_28 Train loss: 0.1950284242630005 at step: 13200 lr 0.0002
+2024_08_21_17_58_23 Train loss: 0.20366497337818146 at step: 13600 lr 0.0002
+2024_08_21_18_01_21 Train loss: 0.5446493625640869 at step: 14000 lr 0.0002
+2024_08_21_18_04_17 Train loss: 0.34552061557769775 at step: 14400 lr 0.0002
+2024_08_21_18_07_20 Train loss: 0.11668883264064789 at step: 14800 lr 0.0002
+2024_08_21_18_10_24 Train loss: 0.19302940368652344 at step: 15200 lr 0.0002
+2024_08_21_18_13_27 Train loss: 0.2586306631565094 at step: 15600 lr 0.0002
+2024_08_21_18_16_30 Train loss: 0.1810666024684906 at step: 16000 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 0) acc: 0.7304886572613207; ap: 0.9142562236110666
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_0.pth
+2024_08_21_18_28_36 Train loss: 0.1800267994403839 at step: 16400 lr 0.0002
+2024_08_21_18_31_37 Train loss: 0.2386309951543808 at step: 16800 lr 0.0002
+2024_08_21_18_34_41 Train loss: 0.18437637388706207 at step: 17200 lr 0.0002
+2024_08_21_18_37_44 Train loss: 0.10615171492099762 at step: 17600 lr 0.0002
+2024_08_21_18_40_48 Train loss: 0.07836120575666428 at step: 18000 lr 0.0002
+2024_08_21_18_43_50 Train loss: 0.10125846415758133 at step: 18400 lr 0.0002
+2024_08_21_18_46_51 Train loss: 0.364941269159317 at step: 18800 lr 0.0002
+2024_08_21_18_49_54 Train loss: 0.16201135516166687 at step: 19200 lr 0.0002
+2024_08_21_18_52_59 Train loss: 0.14894814789295197 at step: 19600 lr 0.0002
+2024_08_21_18_56_02 Train loss: 0.18535631895065308 at step: 20000 lr 0.0002
+2024_08_21_18_59_03 Train loss: 0.14602044224739075 at step: 20400 lr 0.0002
+2024_08_21_19_02_03 Train loss: 0.05122162774205208 at step: 20800 lr 0.0002
+2024_08_21_19_05_06 Train loss: 0.18043485283851624 at step: 21200 lr 0.0002
+2024_08_21_19_08_06 Train loss: 0.30214691162109375 at step: 21600 lr 0.0002
+2024_08_21_19_11_10 Train loss: 0.17194689810276031 at step: 22000 lr 0.0002
+2024_08_21_19_14_13 Train loss: 0.131605863571167 at step: 22400 lr 0.0002
+2024_08_21_19_17_16 Train loss: 0.29190975427627563 at step: 22800 lr 0.0002
+2024_08_21_19_20_19 Train loss: 0.14488649368286133 at step: 23200 lr 0.0002
+2024_08_21_19_23_22 Train loss: 0.03533419221639633 at step: 23600 lr 0.0002
+2024_08_21_19_26_25 Train loss: 0.12492428719997406 at step: 24000 lr 0.0002
+2024_08_21_19_29_27 Train loss: 0.19746585190296173 at step: 24400 lr 0.0002
+2024_08_21_19_32_31 Train loss: 0.14623138308525085 at step: 24800 lr 0.0002
+2024_08_21_19_35_32 Train loss: 0.10078032314777374 at step: 25200 lr 0.0002
+2024_08_21_19_38_35 Train loss: 0.09937538951635361 at step: 25600 lr 0.0002
+2024_08_21_19_41_38 Train loss: 0.1994481086730957 at step: 26000 lr 0.0002
+2024_08_21_19_44_41 Train loss: 0.06663773208856583 at step: 26400 lr 0.0002
+2024_08_21_19_47_41 Train loss: 0.22019317746162415 at step: 26800 lr 0.0002
+2024_08_21_19_50_44 Train loss: 0.26972314715385437 at step: 27200 lr 0.0002
+2024_08_21_19_53_48 Train loss: 0.19638866186141968 at step: 27600 lr 0.0002
+2024_08_21_19_56_50 Train loss: 0.11352614313364029 at step: 28000 lr 0.0002
+2024_08_21_19_59_53 Train loss: 0.0694316104054451 at step: 28400 lr 0.0002
+2024_08_21_20_02_55 Train loss: 0.052163638174533844 at step: 28800 lr 0.0002
+2024_08_21_20_05_57 Train loss: 0.0868084505200386 at step: 29200 lr 0.0002
+2024_08_21_20_08_57 Train loss: 0.17632290720939636 at step: 29600 lr 0.0002
+2024_08_21_20_11_59 Train loss: 0.07365171611309052 at step: 30000 lr 0.0002
+2024_08_21_20_15_03 Train loss: 0.07971474528312683 at step: 30400 lr 0.0002
+2024_08_21_20_18_05 Train loss: 0.055221255868673325 at step: 30800 lr 0.0002
+2024_08_21_20_21_09 Train loss: 0.2979568839073181 at step: 31200 lr 0.0002
+2024_08_21_20_24_10 Train loss: 0.2174980491399765 at step: 31600 lr 0.0002
+2024_08_21_20_27_13 Train loss: 0.21092617511749268 at step: 32000 lr 0.0002
+2024_08_21_20_30_14 Train loss: 0.13939088582992554 at step: 32400 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 1) acc: 0.8157203639991043; ap: 0.9518237834502667
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_1.pth
+2024_08_21_20_44_07 Train loss: 0.10311469435691833 at step: 32800 lr 0.0002
+2024_08_21_20_48_17 Train loss: 0.3589906096458435 at step: 33200 lr 0.0002
+2024_08_21_20_52_29 Train loss: 0.13509517908096313 at step: 33600 lr 0.0002
+2024_08_21_20_56_39 Train loss: 0.1464959979057312 at step: 34000 lr 0.0002
+2024_08_21_21_00_51 Train loss: 0.175695538520813 at step: 34400 lr 0.0002
+2024_08_21_21_05_01 Train loss: 0.14255395531654358 at step: 34800 lr 0.0002
+2024_08_21_21_09_13 Train loss: 0.09816008806228638 at step: 35200 lr 0.0002
+2024_08_21_21_13_25 Train loss: 0.1376299113035202 at step: 35600 lr 0.0002
+2024_08_21_21_17_36 Train loss: 0.10513977706432343 at step: 36000 lr 0.0002
+2024_08_21_21_21_48 Train loss: 0.03752167522907257 at step: 36400 lr 0.0002
+2024_08_21_21_26_00 Train loss: 0.19931602478027344 at step: 36800 lr 0.0002
+2024_08_21_21_30_11 Train loss: 0.13118314743041992 at step: 37200 lr 0.0002
+2024_08_21_21_34_24 Train loss: 0.06541561335325241 at step: 37600 lr 0.0002
+2024_08_21_21_38_33 Train loss: 0.11274868994951248 at step: 38000 lr 0.0002
+2024_08_21_21_42_46 Train loss: 0.05167228728532791 at step: 38400 lr 0.0002
+2024_08_21_21_46_59 Train loss: 0.19995850324630737 at step: 38800 lr 0.0002
+2024_08_21_21_51_09 Train loss: 0.11385998129844666 at step: 39200 lr 0.0002
+2024_08_21_21_55_20 Train loss: 0.05318021401762962 at step: 39600 lr 0.0002
+2024_08_21_21_59_31 Train loss: 0.040824975818395615 at step: 40000 lr 0.0002
+2024_08_21_22_03_43 Train loss: 0.051471732556819916 at step: 40400 lr 0.0002
+2024_08_21_22_07_56 Train loss: 0.08065018057823181 at step: 40800 lr 0.0002
+2024_08_21_22_12_07 Train loss: 0.276980459690094 at step: 41200 lr 0.0002
+2024_08_21_22_16_19 Train loss: 0.04808725789189339 at step: 41600 lr 0.0002
+2024_08_21_22_20_29 Train loss: 0.13932643830776215 at step: 42000 lr 0.0002
+2024_08_21_22_24_42 Train loss: 0.08136389404535294 at step: 42400 lr 0.0002
+2024_08_21_22_28_53 Train loss: 0.02060466632246971 at step: 42800 lr 0.0002
+2024_08_21_22_33_05 Train loss: 0.08596569299697876 at step: 43200 lr 0.0002
+2024_08_21_22_37_16 Train loss: 0.01611747033894062 at step: 43600 lr 0.0002
+2024_08_21_22_41_28 Train loss: 0.2662111520767212 at step: 44000 lr 0.0002
+2024_08_21_22_45_40 Train loss: 0.1926225870847702 at step: 44400 lr 0.0002
+2024_08_21_22_49_51 Train loss: 0.043195128440856934 at step: 44800 lr 0.0002
+2024_08_21_22_54_04 Train loss: 0.04411786049604416 at step: 45200 lr 0.0002
+2024_08_21_22_58_15 Train loss: 0.2180357277393341 at step: 45600 lr 0.0002
+2024_08_21_23_02_26 Train loss: 0.09657914191484451 at step: 46000 lr 0.0002
+2024_08_21_23_06_38 Train loss: 0.0349973663687706 at step: 46400 lr 0.0002
+2024_08_21_23_10_50 Train loss: 0.2868154048919678 at step: 46800 lr 0.0002
+2024_08_21_23_15_03 Train loss: 0.2784079313278198 at step: 47200 lr 0.0002
+2024_08_21_23_19_13 Train loss: 0.2078549712896347 at step: 47600 lr 0.0002
+2024_08_21_23_23_24 Train loss: 0.05412614345550537 at step: 48000 lr 0.0002
+2024_08_21_23_27_36 Train loss: 0.04244528338313103 at step: 48400 lr 0.0002
+2024_08_21_23_31_46 Train loss: 0.11840077489614487 at step: 48800 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 2) acc: 0.8626995921635688; ap: 0.9684692760892506
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_2.pth
+2024_08_21_23_47_59 Train loss: 0.16409078240394592 at step: 49200 lr 0.0002
+2024_08_21_23_52_10 Train loss: 0.036588702350854874 at step: 49600 lr 0.0002
+2024_08_21_23_56_21 Train loss: 0.10003384202718735 at step: 50000 lr 0.0002
+2024_08_22_00_00_31 Train loss: 0.058476485311985016 at step: 50400 lr 0.0002
+2024_08_22_00_04_41 Train loss: 0.14367757737636566 at step: 50800 lr 0.0002
+2024_08_22_00_08_52 Train loss: 0.06824275851249695 at step: 51200 lr 0.0002
+2024_08_22_00_13_02 Train loss: 0.02399834804236889 at step: 51600 lr 0.0002
+2024_08_22_00_17_12 Train loss: 0.11017879843711853 at step: 52000 lr 0.0002
+2024_08_22_00_21_23 Train loss: 0.19461654126644135 at step: 52400 lr 0.0002
+2024_08_22_00_24_50 Train loss: 0.021331453695893288 at step: 52800 lr 0.0002
+2024_08_22_00_27_52 Train loss: 0.08962923288345337 at step: 53200 lr 0.0002
+2024_08_22_00_30_53 Train loss: 0.11794125288724899 at step: 53600 lr 0.0002
+2024_08_22_00_33_54 Train loss: 0.18132133781909943 at step: 54000 lr 0.0002
+2024_08_22_00_36_56 Train loss: 0.06575484573841095 at step: 54400 lr 0.0002
+2024_08_22_00_39_58 Train loss: 0.0772051066160202 at step: 54800 lr 0.0002
+2024_08_22_00_43_01 Train loss: 0.029428565874695778 at step: 55200 lr 0.0002
+2024_08_22_00_46_04 Train loss: 0.03824128583073616 at step: 55600 lr 0.0002
+2024_08_22_00_49_07 Train loss: 0.028812812641263008 at step: 56000 lr 0.0002
+2024_08_22_00_52_08 Train loss: 0.032737549394369125 at step: 56400 lr 0.0002
+2024_08_22_00_55_09 Train loss: 0.061410851776599884 at step: 56800 lr 0.0002
+2024_08_22_00_58_09 Train loss: 0.05289354920387268 at step: 57200 lr 0.0002
+2024_08_22_01_01_12 Train loss: 0.026343312114477158 at step: 57600 lr 0.0002
+2024_08_22_01_04_16 Train loss: 0.08170006424188614 at step: 58000 lr 0.0002
+2024_08_22_01_07_17 Train loss: 0.004787798970937729 at step: 58400 lr 0.0002
+2024_08_22_01_10_20 Train loss: 0.04897751286625862 at step: 58800 lr 0.0002
+2024_08_22_01_13_23 Train loss: 0.04242193326354027 at step: 59200 lr 0.0002
+2024_08_22_01_16_23 Train loss: 0.14637625217437744 at step: 59600 lr 0.0002
+2024_08_22_01_19_25 Train loss: 0.04636877775192261 at step: 60000 lr 0.0002
+2024_08_22_01_22_28 Train loss: 0.06935617327690125 at step: 60400 lr 0.0002
+2024_08_22_01_25_29 Train loss: 0.2129926085472107 at step: 60800 lr 0.0002
+2024_08_22_01_28_32 Train loss: 0.0711764246225357 at step: 61200 lr 0.0002
+2024_08_22_01_31_33 Train loss: 0.09599152207374573 at step: 61600 lr 0.0002
+2024_08_22_01_34_35 Train loss: 0.0834088921546936 at step: 62000 lr 0.0002
+2024_08_22_01_37_39 Train loss: 0.021101931110024452 at step: 62400 lr 0.0002
+2024_08_22_01_40_39 Train loss: 0.1104918122291565 at step: 62800 lr 0.0002
+2024_08_22_01_43_43 Train loss: 0.07209090888500214 at step: 63200 lr 0.0002
+2024_08_22_01_46_47 Train loss: 0.15457406640052795 at step: 63600 lr 0.0002
+2024_08_22_01_49_47 Train loss: 0.058925896883010864 at step: 64000 lr 0.0002
+2024_08_22_01_52_50 Train loss: 0.022735215723514557 at step: 64400 lr 0.0002
+2024_08_22_01_55_52 Train loss: 0.04599468782544136 at step: 64800 lr 0.0002
+2024_08_22_01_58_54 Train loss: 0.029438506811857224 at step: 65200 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 3) acc: 0.8430677985654472; ap: 0.9716924941335515
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_3.pth
+2024_08_22_02_10_47 Train loss: 0.19072026014328003 at step: 65600 lr 0.0002
+2024_08_22_02_13_47 Train loss: 0.0058269379660487175 at step: 66000 lr 0.0002
+2024_08_22_02_16_51 Train loss: 0.2663581371307373 at step: 66400 lr 0.0002
+2024_08_22_02_19_53 Train loss: 0.09036952257156372 at step: 66800 lr 0.0002
+2024_08_22_02_22_54 Train loss: 0.0689600482583046 at step: 67200 lr 0.0002
+2024_08_22_02_25_58 Train loss: 0.040577299892902374 at step: 67600 lr 0.0002
+2024_08_22_02_29_00 Train loss: 0.08568672090768814 at step: 68000 lr 0.0002
+2024_08_22_02_32_04 Train loss: 0.06596094369888306 at step: 68400 lr 0.0002
+2024_08_22_02_35_07 Train loss: 0.24245333671569824 at step: 68800 lr 0.0002
+2024_08_22_02_38_07 Train loss: 0.09099096059799194 at step: 69200 lr 0.0002
+2024_08_22_02_41_10 Train loss: 0.04960530251264572 at step: 69600 lr 0.0002
+2024_08_22_02_44_12 Train loss: 0.11022010445594788 at step: 70000 lr 0.0002
+2024_08_22_02_47_13 Train loss: 0.14865536987781525 at step: 70400 lr 0.0002
+2024_08_22_02_50_17 Train loss: 0.10827964544296265 at step: 70800 lr 0.0002
+2024_08_22_02_53_19 Train loss: 0.058662690222263336 at step: 71200 lr 0.0002
+2024_08_22_02_56_23 Train loss: 0.06705053150653839 at step: 71600 lr 0.0002
+2024_08_22_02_59_26 Train loss: 0.03284275159239769 at step: 72000 lr 0.0002
+2024_08_22_03_02_28 Train loss: 0.09049610793590546 at step: 72400 lr 0.0002
+2024_08_22_03_05_31 Train loss: 0.0864408016204834 at step: 72800 lr 0.0002
+2024_08_22_03_08_34 Train loss: 0.05979927256703377 at step: 73200 lr 0.0002
+2024_08_22_03_11_35 Train loss: 0.037935249507427216 at step: 73600 lr 0.0002
+2024_08_22_03_14_35 Train loss: 0.16815103590488434 at step: 74000 lr 0.0002
+2024_08_22_03_17_36 Train loss: 0.023569248616695404 at step: 74400 lr 0.0002
+2024_08_22_03_20_38 Train loss: 0.08390761911869049 at step: 74800 lr 0.0002
+2024_08_22_03_23_37 Train loss: 0.057048819959163666 at step: 75200 lr 0.0002
+2024_08_22_03_26_40 Train loss: 0.032827626913785934 at step: 75600 lr 0.0002
+2024_08_22_03_29_43 Train loss: 0.05581732839345932 at step: 76000 lr 0.0002
+2024_08_22_03_32_44 Train loss: 0.010619329288601875 at step: 76400 lr 0.0002
+2024_08_22_03_35_36 Train loss: 0.056362591683864594 at step: 76800 lr 0.0002
+2024_08_22_03_38_32 Train loss: 0.08725561201572418 at step: 77200 lr 0.0002
+2024_08_22_03_41_27 Train loss: 0.005276894196867943 at step: 77600 lr 0.0002
+2024_08_22_03_44_24 Train loss: 0.0070574632845819 at step: 78000 lr 0.0002
+2024_08_22_03_47_19 Train loss: 0.10576990246772766 at step: 78400 lr 0.0002
+2024_08_22_03_50_14 Train loss: 0.008261311799287796 at step: 78800 lr 0.0002
+2024_08_22_03_53_07 Train loss: 0.03723638504743576 at step: 79200 lr 0.0002
+2024_08_22_03_55_58 Train loss: 0.05152370035648346 at step: 79600 lr 0.0002
+2024_08_22_03_58_47 Train loss: 0.03991251438856125 at step: 80000 lr 0.0002
+2024_08_22_04_01_35 Train loss: 0.028204673901200294 at step: 80400 lr 0.0002
+2024_08_22_04_04_23 Train loss: 0.021166369318962097 at step: 80800 lr 0.0002
+2024_08_22_04_07_14 Train loss: 0.013041834346950054 at step: 81200 lr 0.0002
+2024_08_22_04_10_07 Train loss: 0.14015623927116394 at step: 81600 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 4) acc: 0.8216309385666687; ap: 0.9724960969243248
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_4.pth
+2024_08_22_04_21_17 Train loss: 0.08369223028421402 at step: 82000 lr 0.0002
+2024_08_22_04_24_06 Train loss: 0.008796248584985733 at step: 82400 lr 0.0002
+2024_08_22_04_26_53 Train loss: 0.016032664105296135 at step: 82800 lr 0.0002
+2024_08_22_04_29_43 Train loss: 0.10954536497592926 at step: 83200 lr 0.0002
+2024_08_22_04_32_36 Train loss: 0.10279359668493271 at step: 83600 lr 0.0002
+2024_08_22_04_35_27 Train loss: 0.05524894595146179 at step: 84000 lr 0.0002
+2024_08_22_04_38_14 Train loss: 0.17494216561317444 at step: 84400 lr 0.0002
+2024_08_22_04_41_02 Train loss: 0.039215587079524994 at step: 84800 lr 0.0002
+2024_08_22_04_43_53 Train loss: 0.011822475120425224 at step: 85200 lr 0.0002
+2024_08_22_04_46_41 Train loss: 0.03954422473907471 at step: 85600 lr 0.0002
+2024_08_22_04_49_34 Train loss: 0.02222004532814026 at step: 86000 lr 0.0002
+2024_08_22_04_52_29 Train loss: 0.08421429246664047 at step: 86400 lr 0.0002
+2024_08_22_04_55_24 Train loss: 0.03793167695403099 at step: 86800 lr 0.0002
+2024_08_22_04_58_28 Train loss: 0.0222824327647686 at step: 87200 lr 0.0002
+2024_08_22_05_01_30 Train loss: 0.007905771024525166 at step: 87600 lr 0.0002
+2024_08_22_05_04_33 Train loss: 0.020133769139647484 at step: 88000 lr 0.0002
+2024_08_22_05_07_35 Train loss: 0.02497805655002594 at step: 88400 lr 0.0002
+2024_08_22_05_10_36 Train loss: 0.01980018988251686 at step: 88800 lr 0.0002
+2024_08_22_05_13_39 Train loss: 0.04981936886906624 at step: 89200 lr 0.0002
+2024_08_22_05_16_41 Train loss: 0.031001131981611252 at step: 89600 lr 0.0002
+2024_08_22_05_19_44 Train loss: 0.045228928327560425 at step: 90000 lr 0.0002
+2024_08_22_05_22_47 Train loss: 0.11046171188354492 at step: 90400 lr 0.0002
+2024_08_22_05_25_49 Train loss: 0.06090158224105835 at step: 90800 lr 0.0002
+2024_08_22_05_28_50 Train loss: 0.010300301015377045 at step: 91200 lr 0.0002
+2024_08_22_05_31_50 Train loss: 0.3922537565231323 at step: 91600 lr 0.0002
+2024_08_22_05_34_54 Train loss: 0.11004205793142319 at step: 92000 lr 0.0002
+2024_08_22_05_37_55 Train loss: 0.07095377892255783 at step: 92400 lr 0.0002
+2024_08_22_05_40_58 Train loss: 0.037478409707546234 at step: 92800 lr 0.0002
+2024_08_22_05_44_01 Train loss: 0.016954168677330017 at step: 93200 lr 0.0002
+2024_08_22_05_47_01 Train loss: 0.014855780638754368 at step: 93600 lr 0.0002
+2024_08_22_05_50_03 Train loss: 0.012815085239708424 at step: 94000 lr 0.0002
+2024_08_22_05_53_06 Train loss: 0.0836963951587677 at step: 94400 lr 0.0002
+2024_08_22_05_56_05 Train loss: 0.015491973608732224 at step: 94800 lr 0.0002
+2024_08_22_05_59_08 Train loss: 0.008684962056577206 at step: 95200 lr 0.0002
+2024_08_22_06_02_11 Train loss: 0.09146548807621002 at step: 95600 lr 0.0002
+2024_08_22_06_05_12 Train loss: 0.019106699153780937 at step: 96000 lr 0.0002
+2024_08_22_06_08_15 Train loss: 0.00976736843585968 at step: 96400 lr 0.0002
+2024_08_22_06_11_19 Train loss: 0.04632186517119408 at step: 96800 lr 0.0002
+2024_08_22_06_14_22 Train loss: 0.012240966781973839 at step: 97200 lr 0.0002
+2024_08_22_06_17_25 Train loss: 0.0028213709592819214 at step: 97600 lr 0.0002
+2024_08_22_06_20_27 Train loss: 0.02317448891699314 at step: 98000 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 5) acc: 0.8230627769521521; ap: 0.9686228040524756
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_5.pth
+2024_08_22_06_32_23 Train loss: 0.009383618831634521 at step: 98400 lr 0.0002
+2024_08_22_06_35_25 Train loss: 0.12370549142360687 at step: 98800 lr 0.0002
+2024_08_22_06_38_29 Train loss: 0.10060279071331024 at step: 99200 lr 0.0002
+2024_08_22_06_41_31 Train loss: 0.10406218469142914 at step: 99600 lr 0.0002
+2024_08_22_06_44_32 Train loss: 0.09945464134216309 at step: 100000 lr 0.0002
+2024_08_22_06_47_35 Train loss: 0.03957778587937355 at step: 100400 lr 0.0002
+2024_08_22_06_50_38 Train loss: 0.015843529254198074 at step: 100800 lr 0.0002
+2024_08_22_06_53_38 Train loss: 0.1638767123222351 at step: 101200 lr 0.0002
+2024_08_22_06_56_41 Train loss: 0.031768549233675 at step: 101600 lr 0.0002
+2024_08_22_06_59_43 Train loss: 0.016219735145568848 at step: 102000 lr 0.0002
+2024_08_22_07_02_44 Train loss: 0.004788805730640888 at step: 102400 lr 0.0002
+2024_08_22_07_05_49 Train loss: 0.05594613403081894 at step: 102800 lr 0.0002
+2024_08_22_07_08_52 Train loss: 0.1386936902999878 at step: 103200 lr 0.0002
+2024_08_22_07_11_54 Train loss: 0.05203121155500412 at step: 103600 lr 0.0002
+2024_08_22_07_14_58 Train loss: 0.08429073542356491 at step: 104000 lr 0.0002
+2024_08_22_07_18_00 Train loss: 0.001077032182365656 at step: 104400 lr 0.0002
+2024_08_22_07_21_04 Train loss: 0.11640746891498566 at step: 104800 lr 0.0002
+2024_08_22_07_24_06 Train loss: 0.023062029853463173 at step: 105200 lr 0.0002
+2024_08_22_07_27_08 Train loss: 0.060860775411129 at step: 105600 lr 0.0002
+2024_08_22_07_30_11 Train loss: 0.09589128196239471 at step: 106000 lr 0.0002
+2024_08_22_07_33_14 Train loss: 0.008529441431164742 at step: 106400 lr 0.0002
+2024_08_22_07_36_17 Train loss: 0.013082844205200672 at step: 106800 lr 0.0002
+2024_08_22_07_39_19 Train loss: 0.010635565966367722 at step: 107200 lr 0.0002
+2024_08_22_07_42_23 Train loss: 0.04876696318387985 at step: 107600 lr 0.0002
+2024_08_22_07_45_26 Train loss: 0.02441304549574852 at step: 108000 lr 0.0002
+2024_08_22_07_48_27 Train loss: 0.05658160150051117 at step: 108400 lr 0.0002
+2024_08_22_07_51_30 Train loss: 0.031142763793468475 at step: 108800 lr 0.0002
+2024_08_22_07_54_29 Train loss: 0.03397450968623161 at step: 109200 lr 0.0002
+2024_08_22_07_57_27 Train loss: 0.08801080286502838 at step: 109600 lr 0.0002
+2024_08_22_08_00_23 Train loss: 0.02579776756465435 at step: 110000 lr 0.0002
+2024_08_22_08_03_22 Train loss: 0.11673036217689514 at step: 110400 lr 0.0002
+2024_08_22_08_06_19 Train loss: 0.024586522951722145 at step: 110800 lr 0.0002
+2024_08_22_08_09_16 Train loss: 0.08985485881567001 at step: 111200 lr 0.0002
+2024_08_22_08_12_14 Train loss: 0.08784233778715134 at step: 111600 lr 0.0002
+2024_08_22_08_15_10 Train loss: 0.037989888340234756 at step: 112000 lr 0.0002
+2024_08_22_08_18_08 Train loss: 0.05556969344615936 at step: 112400 lr 0.0002
+2024_08_22_08_21_05 Train loss: 0.027453560382127762 at step: 112800 lr 0.0002
+2024_08_22_08_24_01 Train loss: 0.03227569907903671 at step: 113200 lr 0.0002
+2024_08_22_08_26_57 Train loss: 0.04763927310705185 at step: 113600 lr 0.0002
+2024_08_22_08_29_54 Train loss: 0.2415037304162979 at step: 114000 lr 0.0002
+2024_08_22_08_32_52 Train loss: 0.03843062371015549 at step: 114400 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 6) acc: 0.8422670548238025; ap: 0.976963654201727
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_6.pth
+2024_08_22_08_44_18 Train loss: 0.11397921293973923 at step: 114800 lr 0.0002
+2024_08_22_08_47_14 Train loss: 0.023950008675456047 at step: 115200 lr 0.0002
+2024_08_22_08_50_10 Train loss: 0.06360844522714615 at step: 115600 lr 0.0002
+2024_08_22_08_53_08 Train loss: 0.006498020142316818 at step: 116000 lr 0.0002
+2024_08_22_08_56_06 Train loss: 0.0552278533577919 at step: 116400 lr 0.0002
+2024_08_22_08_59_05 Train loss: 0.0614430233836174 at step: 116800 lr 0.0002
+2024_08_22_09_01_39 Train loss: 0.04286940023303032 at step: 117200 lr 0.0002
+2024_08_22_09_03_45 Train loss: 0.05265164002776146 at step: 117600 lr 0.0002
+2024_08_22_09_05_51 Train loss: 0.2724944055080414 at step: 118000 lr 0.0002
+2024_08_22_09_07_57 Train loss: 0.018126731738448143 at step: 118400 lr 0.0002
+2024_08_22_09_10_03 Train loss: 0.021199174225330353 at step: 118800 lr 0.0002
+2024_08_22_09_12_14 Train loss: 0.03335142135620117 at step: 119200 lr 0.0002
+2024_08_22_09_14_28 Train loss: 0.05654788017272949 at step: 119600 lr 0.0002
+2024_08_22_09_17_00 Train loss: 0.012890667654573917 at step: 120000 lr 0.0002
+2024_08_22_09_20_06 Train loss: 0.0037294700741767883 at step: 120400 lr 0.0002
+2024_08_22_09_23_09 Train loss: 0.0960380882024765 at step: 120800 lr 0.0002
+2024_08_22_09_26_14 Train loss: 0.026704493910074234 at step: 121200 lr 0.0002
+2024_08_22_09_29_17 Train loss: 0.03608601540327072 at step: 121600 lr 0.0002
+2024_08_22_09_32_21 Train loss: 0.0018895056564360857 at step: 122000 lr 0.0002
+2024_08_22_09_35_27 Train loss: 0.010819241404533386 at step: 122400 lr 0.0002
+2024_08_22_09_38_31 Train loss: 0.044460248202085495 at step: 122800 lr 0.0002
+2024_08_22_09_41_36 Train loss: 0.01144223753362894 at step: 123200 lr 0.0002
+2024_08_22_09_44_40 Train loss: 0.04965624213218689 at step: 123600 lr 0.0002
+2024_08_22_09_47_43 Train loss: 0.017952531576156616 at step: 124000 lr 0.0002
+2024_08_22_09_50_47 Train loss: 0.007548818364739418 at step: 124400 lr 0.0002
+2024_08_22_09_53_51 Train loss: 0.08194997161626816 at step: 124800 lr 0.0002
+2024_08_22_09_56_55 Train loss: 0.021921565756201744 at step: 125200 lr 0.0002
+2024_08_22_09_58_36 Train loss: 0.16234584152698517 at step: 125600 lr 0.0002
+2024_08_22_09_59_32 Train loss: 0.1541863977909088 at step: 126000 lr 0.0002
+2024_08_22_10_00_27 Train loss: 0.01230790838599205 at step: 126400 lr 0.0002
+2024_08_22_10_01_22 Train loss: 0.0027894298546016216 at step: 126800 lr 0.0002
+2024_08_22_10_02_18 Train loss: 0.023253751918673515 at step: 127200 lr 0.0002
+2024_08_22_10_03_13 Train loss: 0.020646171644330025 at step: 127600 lr 0.0002
+2024_08_22_10_04_08 Train loss: 0.0040571726858615875 at step: 128000 lr 0.0002
+2024_08_22_10_05_03 Train loss: 0.04469370096921921 at step: 128400 lr 0.0002
+2024_08_22_10_05_59 Train loss: 0.2319832742214203 at step: 128800 lr 0.0002
+2024_08_22_10_06_54 Train loss: 0.01494857668876648 at step: 129200 lr 0.0002
+2024_08_22_10_07_49 Train loss: 0.005261697806417942 at step: 129600 lr 0.0002
+2024_08_22_10_08_45 Train loss: 0.0034416879061609507 at step: 130000 lr 0.0002
+2024_08_22_10_09_40 Train loss: 0.034702666103839874 at step: 130400 lr 0.0002
+2024_08_22_10_10_35 Train loss: 0.05030565708875656 at step: 130800 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 7) acc: 0.7553863588553436; ap: 0.9758533358964822
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_7.pth
+2024_08_22_10_14_50 Train loss: 0.003224264830350876 at step: 131200 lr 0.0002
+2024_08_22_10_15_45 Train loss: 0.024588363245129585 at step: 131600 lr 0.0002
+2024_08_22_10_16_40 Train loss: 0.004931020550429821 at step: 132000 lr 0.0002
+2024_08_22_10_17_35 Train loss: 0.05771070346236229 at step: 132400 lr 0.0002
+2024_08_22_10_18_30 Train loss: 0.00984700582921505 at step: 132800 lr 0.0002
+2024_08_22_10_19_25 Train loss: 0.04117126390337944 at step: 133200 lr 0.0002
+2024_08_22_10_20_20 Train loss: 0.012339032255113125 at step: 133600 lr 0.0002
+2024_08_22_10_21_15 Train loss: 0.08559851348400116 at step: 134000 lr 0.0002
+2024_08_22_10_22_10 Train loss: 0.008746047504246235 at step: 134400 lr 0.0002
+2024_08_22_10_23_05 Train loss: 0.030074885115027428 at step: 134800 lr 0.0002
+2024_08_22_10_24_01 Train loss: 0.04568801820278168 at step: 135200 lr 0.0002
+2024_08_22_10_24_56 Train loss: 0.0631423369050026 at step: 135600 lr 0.0002
+2024_08_22_10_25_51 Train loss: 0.03765140473842621 at step: 136000 lr 0.0002
+2024_08_22_10_26_46 Train loss: 0.007679629139602184 at step: 136400 lr 0.0002
+2024_08_22_10_27_41 Train loss: 0.009322204627096653 at step: 136800 lr 0.0002
+2024_08_22_10_28_36 Train loss: 0.03118283860385418 at step: 137200 lr 0.0002
+2024_08_22_10_29_31 Train loss: 0.01086265780031681 at step: 137600 lr 0.0002
+2024_08_22_10_30_27 Train loss: 0.0009427429176867008 at step: 138000 lr 0.0002
+2024_08_22_10_31_22 Train loss: 0.011257612146437168 at step: 138400 lr 0.0002
+2024_08_22_10_32_17 Train loss: 0.1257878541946411 at step: 138800 lr 0.0002
+2024_08_22_10_33_12 Train loss: 0.009934904053807259 at step: 139200 lr 0.0002
+2024_08_22_10_34_07 Train loss: 0.09377443045377731 at step: 139600 lr 0.0002
+2024_08_22_10_35_03 Train loss: 0.0007467209361493587 at step: 140000 lr 0.0002
+2024_08_22_10_35_58 Train loss: 0.005976362153887749 at step: 140400 lr 0.0002
+2024_08_22_10_36_53 Train loss: 0.017030246555805206 at step: 140800 lr 0.0002
+2024_08_22_10_37_48 Train loss: 0.045605119317770004 at step: 141200 lr 0.0002
+2024_08_22_10_38_44 Train loss: 0.03479038551449776 at step: 141600 lr 0.0002
+2024_08_22_10_39_39 Train loss: 0.010701335966587067 at step: 142000 lr 0.0002
+2024_08_22_10_40_35 Train loss: 0.12304915487766266 at step: 142400 lr 0.0002
+2024_08_22_10_41_30 Train loss: 0.016558920964598656 at step: 142800 lr 0.0002
+2024_08_22_10_42_25 Train loss: 0.02171514928340912 at step: 143200 lr 0.0002
+2024_08_22_10_43_20 Train loss: 0.010593753308057785 at step: 143600 lr 0.0002
+2024_08_22_10_44_16 Train loss: 0.009442056529223919 at step: 144000 lr 0.0002
+2024_08_22_10_45_13 Train loss: 0.007458404637873173 at step: 144400 lr 0.0002
+2024_08_22_10_46_10 Train loss: 0.16437558829784393 at step: 144800 lr 0.0002
+2024_08_22_10_47_07 Train loss: 0.04322541132569313 at step: 145200 lr 0.0002
+2024_08_22_10_48_04 Train loss: 0.01686267741024494 at step: 145600 lr 0.0002
+2024_08_22_10_49_02 Train loss: 0.007445364259183407 at step: 146000 lr 0.0002
+2024_08_22_10_49_59 Train loss: 0.007289187051355839 at step: 146400 lr 0.0002
+2024_08_22_10_50_56 Train loss: 0.16234084963798523 at step: 146800 lr 0.0002
+2024_08_22_10_51_53 Train loss: 0.016842316836118698 at step: 147200 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 8) acc: 0.8507427237501951; ap: 0.9728463158378063
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_8.pth
+2024_08_22_10_56_20 Train loss: 0.04341599717736244 at step: 147600 lr 0.0002
+2024_08_22_10_57_17 Train loss: 0.0373879000544548 at step: 148000 lr 0.0002
+2024_08_22_10_58_13 Train loss: 0.04335750266909599 at step: 148400 lr 0.0002
+2024_08_22_10_59_10 Train loss: 0.00388606870546937 at step: 148800 lr 0.0002
+2024_08_22_11_00_06 Train loss: 0.0032247842755168676 at step: 149200 lr 0.0002
+2024_08_22_11_01_03 Train loss: 0.005021440330892801 at step: 149600 lr 0.0002
+2024_08_22_11_01_59 Train loss: 0.01594671420753002 at step: 150000 lr 0.0002
+2024_08_22_11_02_55 Train loss: 0.13482698798179626 at step: 150400 lr 0.0002
+2024_08_22_11_03_51 Train loss: 0.011791958473622799 at step: 150800 lr 0.0002
+2024_08_22_11_04_47 Train loss: 0.0015519282314926386 at step: 151200 lr 0.0002
+2024_08_22_11_05_44 Train loss: 0.011827385053038597 at step: 151600 lr 0.0002
+2024_08_22_11_06_40 Train loss: 0.0027366895228624344 at step: 152000 lr 0.0002
+2024_08_22_11_07_36 Train loss: 0.01346631906926632 at step: 152400 lr 0.0002
+2024_08_22_11_08_32 Train loss: 0.07615400105714798 at step: 152800 lr 0.0002
+2024_08_22_11_09_28 Train loss: 0.005441820248961449 at step: 153200 lr 0.0002
+2024_08_22_11_10_25 Train loss: 0.02081894688308239 at step: 153600 lr 0.0002
+2024_08_22_11_11_21 Train loss: 0.008898884057998657 at step: 154000 lr 0.0002
+2024_08_22_11_12_17 Train loss: 0.008297236636281013 at step: 154400 lr 0.0002
+2024_08_22_11_13_13 Train loss: 0.02412089705467224 at step: 154800 lr 0.0002
+2024_08_22_11_14_09 Train loss: 0.014793068170547485 at step: 155200 lr 0.0002
+2024_08_22_11_15_06 Train loss: 0.017713062465190887 at step: 155600 lr 0.0002
+2024_08_22_11_16_02 Train loss: 0.11480052769184113 at step: 156000 lr 0.0002
+2024_08_22_11_16_58 Train loss: 0.04284127056598663 at step: 156400 lr 0.0002
+2024_08_22_11_17_54 Train loss: 0.013724752701818943 at step: 156800 lr 0.0002
+2024_08_22_11_18_50 Train loss: 0.01719188317656517 at step: 157200 lr 0.0002
+2024_08_22_11_19_46 Train loss: 0.00388341280631721 at step: 157600 lr 0.0002
+2024_08_22_11_20_43 Train loss: 0.013508222065865993 at step: 158000 lr 0.0002
+2024_08_22_11_21_39 Train loss: 0.004891829565167427 at step: 158400 lr 0.0002
+2024_08_22_11_22_35 Train loss: 0.13828760385513306 at step: 158800 lr 0.0002
+2024_08_22_11_23_31 Train loss: 0.08200094848871231 at step: 159200 lr 0.0002
+2024_08_22_11_24_28 Train loss: 0.017784392461180687 at step: 159600 lr 0.0002
+2024_08_22_11_25_24 Train loss: 0.008600848726928234 at step: 160000 lr 0.0002
+2024_08_22_11_26_20 Train loss: 0.0435965470969677 at step: 160400 lr 0.0002
+2024_08_22_11_27_16 Train loss: 0.00933723896741867 at step: 160800 lr 0.0002
+2024_08_22_11_28_13 Train loss: 0.0018556207651272416 at step: 161200 lr 0.0002
+2024_08_22_11_29_09 Train loss: 0.00899889413267374 at step: 161600 lr 0.0002
+2024_08_22_11_30_05 Train loss: 0.021531054750084877 at step: 162000 lr 0.0002
+2024_08_22_11_31_02 Train loss: 0.06144168972969055 at step: 162400 lr 0.0002
+2024_08_22_11_31_58 Train loss: 0.0015079407021403313 at step: 162800 lr 0.0002
+2024_08_22_11_32_54 Train loss: 0.016277797520160675 at step: 163200 lr 0.0002
+2024_08_22_11_33_51 Train loss: 0.003048988524824381 at step: 163600 lr 0.0002
+Namespace(arch='res50', batch_size=32, beta1=0.9, blur_prob=0, blur_sig=[0.5], checkpoints_dir='./checkpoints', class_bal=False, classes=['0_real', '1_fake'], continue_train=False, cropSize=224, data_aug=False, dataroot='/mnt/share_data/dmj/phase1_converted//val/', delr_freq=10, earlystop_epoch=15, epoch='latest', epoch_count=1, gpu_ids=[0], init_gain=0.02, init_type='normal', isTrain=False, jpg_method=['cv2'], jpg_prob=0, jpg_qual=[75], last_epoch=-1, loadSize=256, loss_freq=400, lr=0.0002, mode='binary', name='NPR_effnetb12024_08_21_15_18_03', new_optim=False, niter=10, no_crop=False, no_flip=False, no_resize=False, num_threads=8, optim='adam', resize_or_crop='scale_and_crop', rz_interp=['bilinear'], save_epoch_freq=20, save_latest_freq=2000, serial_batches=True, suffix='', train_split='train', val_split='val')
+shuffle:  False
+rz:       Resize(size=(256, 256), interpolation=bilinear, max_size=None, antialias=True)
+crop:     CenterCrop(size=(224, 224))
+flip:     Lambda()
+sampler:  None
+validate
+(Val @ epoch 9) acc: 0.8373268730956889; ap: 0.9684630595256605
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_9.pth
+Saving model ./checkpoints/NPR_effnetb12024_08_21_15_18_02/model_epoch_last.pth
