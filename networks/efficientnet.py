@@ -312,17 +312,22 @@ class EfficientNet(nn.Module):
         # print("interpolate")
         # print(x.shape)
         # print(self.interpolate(x, 0.5).shape)
-        NPR  = x - self.interpolate(x, 0.5)
+        NPR_ = self.interpolate(x, 0.5)
+        NPR  = x - NPR_
         x = NPR*2.0/3.0
         
         x = self.features(x)
+        # print(x.shape)
 
         x = self.avgpool(x)
+        # print(x.shape)
         x = torch.flatten(x, 1)
+        # print(x.shape)
+        flat = x.reshape(32, 40)
 
         x = self.classifier(x)
 
-        return x
+        return x, flat, NPR_
 
     def forward(self, x: Tensor) -> Tensor:
         return self._forward_impl(x)
