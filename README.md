@@ -13,4 +13,4 @@ python app.py
 
 need to replace or delete the example images in app.py
 
-![example1](./assets/example.png)
+![example1](./assets/example.png)1
