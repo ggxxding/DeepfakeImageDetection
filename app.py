@@ -83,8 +83,8 @@ if __name__ == "__main__":
                 btn = gr.Button("提交")
 
                 gr.Examples(
-                    examples=['/mnt/share_data/dmj/phase1_converted/val/0_real/fdfd6d28c38420e7872b85d5419c44ae.jpg',
-                    '/mnt/share_data/dmj/phase1_converted/val/1_fake/fd448eca0f3a66ea6dac2fcb423c441d.jpg',
+                    examples=['./src/fdfd6d28c38420e7872b85d5419c44ae.jpg',
+                    './src/fd448eca0f3a66ea6dac2fcb423c441d.jpg',
                 './src/d80534da7b09be2684de429be22b8b9d.jpg',
                     './src/f7ade355ac7d53dfdd39b2d71d72bfa2.jpg',
                     './src/b1e9f64896e0b11945a9946258f7218d.jpg',

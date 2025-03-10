@@ -22,7 +22,7 @@
     const imageUrl = ref('https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100')
     const fetchImage = () => {
         console.log('222')
-        axios.get('http://127.0.0.1:5000/get_qrcode',{
+        axios.get('http://localhost:5000/get_qrcode',{
             responseType: 'blob'
         }).then((response) => {
             const blob = new Blob([response.data], { type: 'image/png' });

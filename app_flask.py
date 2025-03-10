@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, send_file
+from flask_cors import CORS
 import qrcode
 import os
 
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -11,7 +13,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def home():
     """生成二维码，指向上传页面"""
     print('testset')
-    upload_url = "http://127.0.0.1:5000/upload"  # 服务器部署后需替换为公网 URL
+    upload_url = "http://localhost:5000/upload"  # 服务器部署后需替换为公网 URL
     qr = qrcode.make(upload_url)
     qr_path = os.path.join(UPLOAD_FOLDER, 'upload_qr.png')
     qr.save(qr_path)
