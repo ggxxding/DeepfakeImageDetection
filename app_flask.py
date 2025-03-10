@@ -7,9 +7,10 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@app.route('/get_qrcode')
+@app.route('/get_qrcode',methods=['GET', 'POST'])
 def home():
     """生成二维码，指向上传页面"""
+    print('testset')
     upload_url = "http://127.0.0.1:5000/upload"  # 服务器部署后需替换为公网 URL
     qr = qrcode.make(upload_url)
     qr_path = os.path.join(UPLOAD_FOLDER, 'upload_qr.png')
