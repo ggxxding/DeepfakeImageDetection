@@ -27,11 +27,20 @@ preprocess = transforms.Compose(
     ]
 )
 
+
+def make_hw_even(image: np.ndarray) -> np.ndarray:
+    h, w = image.shape[:2]
+    new_h = h if h % 2 == 0 else h - 1
+    new_w = w if w % 2 == 0 else w - 1
+    return image[:new_h, :new_w]
+
 def deepfake_image_detection(image):
+    print('image.shape:',image.shape)
+    image = make_hw_even(image)
     image_tensor = toTensors(image)
-    print(image_tensor.shape)
+    print('image_tensor.shape:',image_tensor.shape)
     NPR_ = interpolate(image_tensor, 0.5)
-    print(NPR_.shape)
+    print('NPR:',NPR_.shape)
     NPR = image_tensor - NPR_
     NPR = rz_func3(toPIL(NPR))
     NPR_ = toPIL(NPR_)
@@ -55,9 +64,9 @@ if __name__ == "__main__":
     #         '/mnt/share_data/dmj/phase1_converted/train/0_real/f7ade355ac7d53dfdd39b2d71d72bfa2.jpg',
     #         '/mnt/share_data/dmj/phase1_converted/train/1_fake/b1e9f64896e0b11945a9946258f7218d.jpg',
     #         '/mnt/share_data/dmj/phase1_converted/train/1_fake/6ad80d61f821a5e58878d58a2018eb48.jpg']
-    imgs = ['/mnt/share_data/dmj/phase1_converted/val/0_real/fdfd6d28c38420e7872b85d5419c44ae.jpg',
-            '/mnt/share_data/dmj/phase1_converted/val/1_fake/fd448eca0f3a66ea6dac2fcb423c441d.jpg',
-        './src/d80534da7b09be2684de429be22b8b9d.jpg',
+    imgs = ['./src/fdfd6d28c38420e7872b85d5419c44ae.jpg',
+            './src/fd448eca0f3a66ea6dac2fcb423c441d.jpg',
+            './src/d80534da7b09be2684de429be22b8b9d.jpg',
             './src/f7ade355ac7d53dfdd39b2d71d72bfa2.jpg',
             './src/b1e9f64896e0b11945a9946258f7218d.jpg',
             './src/6ad80d61f821a5e58878d58a2018eb48.jpg']
